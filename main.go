@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
-	"metaReader/internal"
+
+	"github.com/SuperninjaXII/goEpubTools/internal"
 )
 
 func main() {
