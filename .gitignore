@@ -1,4 +1,4 @@
-./main.go
-./children.epub
-./test
-./temp
+main.go
+children.epub
+/test
+/temp
