@@ -5,7 +5,7 @@ this package is a simple library to change metadata of epub and get simple data 
 To install run the following command 
 
 ```bash
-go install github.com/SuperninjaXII/goEpubTools/internal
+go get github.com/SuperninjaXII/goEpubTools/internal
 ```
 ## Example 
 this simple example shows the usage in every way 
