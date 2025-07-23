@@ -1,4 +1,4 @@
-package internal
+package epubtools
 
 import (
 	"archive/zip"
