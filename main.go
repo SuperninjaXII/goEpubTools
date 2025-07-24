@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/SuperninjaXII/goEpubTools/internal"
+	"github.com/SuperninjaXII/goEpubTools/EpubTools"
 )
 
 func main() {
@@ -13,7 +13,7 @@ func main() {
 	outputEpub := "updated_book.epub"
 
 	// Step 1: Read existing metadata
-	metadataPkg, err := internal.ReadMetaData(inputEpub)
+	metadataPkg, err := epubtools.ReadMetaData(inputEpub)
 	if err != nil {
 		log.Fatalf("Failed to read metadata: %v", err)
 	}
@@ -28,8 +28,8 @@ func main() {
 	}
 
 	// Step 2: Modify the metadata
-	newMetadata := &internal.Package{
-		MetaData: internal.MetaData{
+	newMetadata := &epubtools.Package{
+		MetaData: epubtools.MetaData{
 			Title:       "New Title Here",
 			Author:      "SuperninjaX2",
 			Date:        "2025-07-17",
@@ -39,7 +39,7 @@ func main() {
 
 	// Step 3: Edit and save the updated EPUB
 	fmt.Println("\n📦 Updating metadata and repacking EPUB...")
-	internal.EditEpub(newMetadata, inputEpub, outputEpub)
+	epubtools.EditEpub(newMetadata, inputEpub, outputEpub)
 
 	fmt.Println("✅ Metadata updated and saved to:", outputEpub)
 }
